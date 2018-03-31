@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="bstu.by.lab6k.MainActivity"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:text="Данные:" />
+
+    <ListView
+        android:id="@+id/lvData"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" />
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/lvData"
+        android:layout_below="@+id/lvData"
+        android:layout_marginTop="16dp"
+        android:text="Данные:" />
+
+    <EditText
+        android:id="@+id/etData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_marginStart="12dp"
+        android:layout_toEndOf="@+id/textView2"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:selectAllOnFocus="false" />
+
+    <Button
+        android:id="@+id/btnInsert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_below="@+id/etData"
+        android:layout_marginTop="11dp"
+        android:text="Insert" />
+
+    <Button
+        android:id="@+id/btnReadDB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnInsert"
+        android:layout_alignBottom="@+id/btnInsert"
+        android:layout_centerHorizontal="true"
+        android:text="Read" />
+
+    <EditText
+        android:id="@+id/etUpdateOld"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btnInsert"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="26dp"
+        android:ems="10"
+        android:hint="old value"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/etUpdateNew"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/etUpdateOld"
+        android:layout_below="@+id/etUpdateOld"
+        android:ems="10"
+        android:hint="new value"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnReadDB"
+        android:layout_alignBottom="@+id/btnReadDB"
+        android:layout_alignEnd="@+id/lvData"
+        android:text="Update" />
+
+    <EditText
+        android:id="@+id/etDelete"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/etUpdateOld"
+        android:layout_alignBottom="@+id/etUpdateOld"
+        android:layout_alignStart="@+id/textView"
+        android:ems="10"
+        android:hint="delete"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/etUpdateNew"
+        android:layout_alignBottom="@+id/etUpdateNew"
+        android:layout_toStartOf="@+id/btnUpdate"
+        android:text="Delete" />
+</RelativeLayout>
